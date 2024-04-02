@@ -5,6 +5,7 @@ import TicketForm from "../../components/CreateTicketForm";
 import { useAuth } from "../../hooks/AuthProvider";
 import { AdminTicketContext } from "../../contexts/AdminTicketContext";
 import { TechSupportContext } from "../../contexts/TechSupportContext";
+import './Admin.css'
 
 const AdminDash = () => {
   const auth = useAuth();
@@ -28,12 +29,14 @@ const AdminDash = () => {
   }, [tickets]);
 
   return (
-    <div>
-      <h1>Admin Dashboard</h1>
-      <h2>All Tickets</h2>
+  <div className="text-light mt-5">
+    <h1>Admin Dashboard</h1>
+    <h2>All Tickets</h2>
+    <div id="adminDiv">
+
 
       {currentState.map((ticket) => (
-        <div>
+        <div >
           <Ticket
             key={ticket.id}
             title={ticket.title}
@@ -45,6 +48,7 @@ const AdminDash = () => {
             onChange={(e) =>
               handleChangeTechSupport(ticket.id, JSON.parse(e.target.value))
             }
+            className="bg bg-primary text-light rounded-4"
           >
             <option value="">Select Tech Support</option>
             {techSupports.map((techSupport) => (
@@ -58,12 +62,14 @@ const AdminDash = () => {
                 {techSupport.email}
               </option>
             ))}
-          </select>
-          <button onClick={() => handleDeleteTicket(ticket.id)}>Delete</button>
+          </select> <br />
+          <button className="btn btn-danger rounded-5" onClick={() => handleDeleteTicket(ticket.id)}>Delete</button>
         </div>
       ))}
     </div>
+  </div>
   );
+
 };
 
 export default AdminDash;

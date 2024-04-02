@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import Ticket from "./Ticket";
 import SolutionForm from "./SolutionForm";
+import './TechSupportTicket.css'
 
 const TechSupportTicket = (props) => {
   const handleToggle = () => {
@@ -32,13 +33,13 @@ const TechSupportTicket = (props) => {
       </div>
       <div>
         <div>
-          <button onClick={handleToggle}>
+          <button onClick={handleToggle} className="btn btn-success  border-2 mb-2 rounded-5">
             {props.isResolved ? "Mark as Unresolved" : "Mark as Resolved"}
           </button>
         </div>
         <div>
           {" "}
-          <button onClick={handleOpenForm}>Resolve / Add Solution</button>
+          <button onClick={handleOpenForm} className="btn btn-primary text-light">Resolve / Add Solution</button>
           {/* Render the SolutionForm component as a modal when isFormOpen is true */}
           {isFormOpen && (
             <SolutionForm
