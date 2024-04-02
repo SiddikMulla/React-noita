@@ -60,7 +60,7 @@ const CreateTicketForm = () => {
           </div>
 
       <div> 
-        <button className="btn btn-outline-light" type="submit">Create Ticket</button>
+        <button className="btn btn-outline-light " type="submit">Create Ticket</button>
         </div>
        
       </form>

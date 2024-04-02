@@ -33,7 +33,7 @@ const TechSupportTicket = (props) => {
       </div>
       <div>
         <div>
-          <button onClick={handleToggle} className="btn btn-success  border-2 mb-2 rounded-5">
+          <button onClick={handleToggle} className="btn btn-success border-2 mb-2 rounded-5">
             {props.isResolved ? "Mark as Unresolved" : "Mark as Resolved"}
           </button>
         </div>
