@@ -1,12 +1,13 @@
 import React, { useState } from "react";
 import { useAuth } from "../hooks/AuthProvider";
+import './Register.css'
 
 const Register = ({ switchToLogin }) => {
   const [formData, setFormData] = useState({
     email: "",
     password: "",
     confirmPassword: "",
-    role: "user",
+    role: "Select Role",
   });
   const [message, setMessage] = useState("");
 
@@ -38,12 +39,11 @@ const Register = ({ switchToLogin }) => {
   };
 
   return (
-    <div>
-      <h2>Login</h2>
+    <div className="text-light" id="div1">
+      <h1>Register</h1>
       <p>{message}</p>
       <form onSubmit={handleSubmit}>
-        <div>
-          <label htmlFor="email">Email:</label>
+        <div> 
           <input
             type="email"
             name="email"
@@ -51,10 +51,10 @@ const Register = ({ switchToLogin }) => {
             value={formData.email}
             onChange={handleInputChange}
             required
+            placeholder="Email"
           />
         </div>
         <div>
-          <label htmlFor="password">Password:</label>
           <input
             type="password"
             name="password"
@@ -62,10 +62,10 @@ const Register = ({ switchToLogin }) => {
             value={formData.password}
             onChange={handleInputChange}
             required
+            placeholder="Password"
           />
         </div>
         <div>
-          <label htmlFor="password">confirm password:</label>
           <input
             type="password"
             name="confirmPassword"
@@ -73,24 +73,26 @@ const Register = ({ switchToLogin }) => {
             value={formData.confirmPassword}
             onChange={handleInputChange}
             required
+            placeholder="Confirm Password"
           />
         </div>
         <div>
-          <label for="role">Choose a role:</label>
           <select
             name="role"
             id="role"
             value={formData.role}
             onChange={handleInputChange}
             required
+            className="bg bg-success text-light rounded-4"
           >
+            <option value="user">Select Role</option>
             <option value="user">User</option>
             <option value="techsupport">Tech Support</option>
             <option value="admin">Admin</option>
           </select>
         </div>
         <div>
-          <button type="submit">Register</button>
+          <button className="btn btn-primary rounded-4 mb-3" type="submit">Register</button>
         </div>
       </form>
     </div>

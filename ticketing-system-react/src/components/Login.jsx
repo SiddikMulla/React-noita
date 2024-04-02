@@ -1,11 +1,11 @@
 import React, { useState } from "react";
 import { useAuth } from "../hooks/AuthProvider";
-
+import './Login.css'
 const Login = () => {
   const [formData, setFormData] = useState({
     email: "",
     password: "",
-    role: "user",
+    role: "Select",
   });
 
   const handleInputChange = (e) => {
@@ -30,48 +30,55 @@ const Login = () => {
   };
 
   return (
-    <div>
-      <h2>Login</h2>
+    <div className="cotainer text-light mx-auto" id="main">
+      <h2 className="text-light">Login</h2>
       <form onSubmit={handleSubmit}>
-        <div>
-          <label htmlFor="email">Email:</label>
-          <input
+        <div className="form-group" id="div1">
+       
+          {/* <label htmlFor="email">Email</label> */}
+          <input className="rounded-4 p-2"
             type="email"
             name="email"
             id="email"
             value={formData.email}
             onChange={handleInputChange}
             required
+            placeholder="Email"
           />
         </div>
-        <div>
-          <label htmlFor="password">Password:</label>
-          <input
+        <div className="form-group " id="div2">
+      
+          {/* <label htmlFor="password">Password</label> */}
+          <input className="rounded-4 p-2"
             type="password"
             name="password"
             id="password"
             value={formData.password}
             onChange={handleInputChange}
             required
+            placeholder="Password"
           />
         </div>
-        <div>
-          <label for="role">Choose a role:</label>
-          <select
+        <div className="form-group" id="div3">
+  
+          <select className="rounded-4 p-2 bg bg-success text-light"
             name="role"
             id="role"
             value={formData.role}
             onChange={handleInputChange}
             required
           >
+            <option value="Select">Select Role</option>
             <option value="user">User</option>
             <option value="techsupport">Tech Support</option>
             <option value="admin">Admin</option>
           </select>
         </div>
-        <div>
-          <button type="submit">Login</button>
+        <div className="dis">
+          <button className="btn btn-primary rounded-4" type="submit">Login</button>
         </div>
+
+       
       </form>
     </div>
   );

@@ -1,0 +1,21 @@
+input{
+    margin-bottom: 13px;
+    padding: 12px;
+    border-radius: 20px;
+    background-color: #dacbcb;
+}
+input::placeholder{
+  margin-inline-start: 2px;
+  color: black;
+}
+
+select{
+    padding: 6px;
+    margin-bottom: 13px;
+    
+
+}
+
+#div1{
+    margin-top: 40px;
+}

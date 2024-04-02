@@ -3,6 +3,7 @@ import { Outlet, Link } from "react-router-dom";
 import Ticket from "../../components/Ticket";
 import { useAuth } from "../../hooks/AuthProvider";
 import { UserTicketContext } from "../../contexts/UserTIcketContext";
+import './Dash.css'
 
 const Dash = () => {
   const auth = useAuth();
@@ -30,18 +31,15 @@ const Dash = () => {
 
   return (
     <div>
-      <div>
+      <div className="mt-5">
         <h1>Welcome! {auth.user?.email}</h1>
-        <button onClick={() => auth.logOut()} className="btn-submit">
-          logout
-        </button>
       </div>
       <div>
         <Link to={"/createticket"}>
-          <button class="btn-primary"> create </button>
+          <button class="btn btn-primary mt-3 mb-3"> Create Query </button>
         </Link>
       </div>
-      <div className="ticket-list">
+      <div className="ticket-list" id="ticketDash">
         {currentState.map((card, index) => (
           <Ticket
             key={index}
@@ -50,6 +48,11 @@ const Dash = () => {
             image={card.image}
           />
         ))}
+      </div>
+      <div>
+      <button onClick={() => auth.logOut()} className="btn btn-danger">
+          logout
+        </button>
       </div>
     </div>
   );

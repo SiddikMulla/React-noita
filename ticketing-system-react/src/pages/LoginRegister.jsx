@@ -16,13 +16,13 @@ function LoginPage() {
 
   return (
     <div>
-      <h1>{currentView === "login" ? "Login" : "Register"}</h1>
+      <h1>{currentView === "Login" ? "Login" : "Register"}</h1>
       {currentView === "login" ? (
         <Login />
       ) : (
         <Register switchToLogin={switchToLogin} />
       )}
-      <button onClick={handleSwitchView}>
+      <button className="btn btn-warning" onClick={handleSwitchView}>
         {currentView === "login" ? "Switch to Register" : "Switch to Login"}
       </button>
     </div>

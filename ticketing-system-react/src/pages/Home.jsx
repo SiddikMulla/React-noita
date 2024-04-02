@@ -1,27 +1,28 @@
 import React from "react";
 import { Outlet, Link } from "react-router-dom";
+import './Home.css'
 
 const HomePage = () => {
   return (
-    <div>
+    <div className="my-5">
       <header>
-        <h1>My Simple React Home Page</h1>
+        <h1>React Home Page</h1>
       </header>
       <main>
         <p>
           Welcome to my simple React home page! This is a basic example of a
-          React project.
+          React project...
         </p>
-        <img src="https://via.placeholder.com/300" alt="Placeholder" />
+        {/* <img src="https://picsum.photos/200/100" alt="Placeholder" className="mb-3" /> */}
         <ul>
           <li>
-            <Link to="/">Home</Link>
+            <Link to="/"><div className="home-button">Home</div></Link>
           </li>
           <li>
-            <Link to="/login">login</Link>
+            <Link to="/login"><div className="login-button">Login</div></Link>
           </li>
           <li>
-            <Link to="/userdash">userdash</Link>
+            <Link to="/userdash"><div className="Dash-button" >Userdash</div></Link>
           </li>
         </ul>
       </main>

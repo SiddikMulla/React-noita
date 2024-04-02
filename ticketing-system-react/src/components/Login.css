@@ -1,0 +1,16 @@
+#main{ 
+    width: max-content;
+    padding: 30px;
+    border: 2px solid white;
+    border-radius: 20px;
+    margin-bottom: 14px;
+}
+
+input{
+background-color: rgb(255, 255, 255);
+padding: 12px;
+}
+
+input::placeholder{
+    margin-left: 30px;
+}
