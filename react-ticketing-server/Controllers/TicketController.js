@@ -8,7 +8,6 @@ const path = require("path");
 //get tickets
 const gettickets = expressAsyncHandler(async (req, res) => {
   const tickets = Tickets;
-  console.log(tickets);
   res.status(200).json(tickets);
 });
 
@@ -41,7 +40,7 @@ const getTicketByUserId = (req, res) => {
 const updateTechSupport = (req, res) => {
   const { ticketId } = req.params;
   const { techSupport } = req.body;
-  console.log(techSupport);
+  
 
   // Find the ticket in the tickets array
   const ticketIndex = Tickets.findIndex(
