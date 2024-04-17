@@ -8,7 +8,7 @@ Welcome to the Redux Based Authetication This repository contains both frontend 
 - `react-ticketing-server/`: Contains the backend code.
 
 ## Getting Started
-Fork The Repository or <br>
+'git fork' The Repository or
 Clone this repository to your local machine:
 `git clone <https://github.com/SiddikMulla/React-noita.git>`
 
@@ -35,5 +35,5 @@ Navigate to the react-ticketing-server/ directory:
 This will start the backend server using Nodemon for automatic restarts upon file changes.
 
 
-## Feel free to customize it further based on your project's specific needs!
+<b><em>Feel free to customize it further based on your project's specific needs!
 
