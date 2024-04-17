@@ -10,32 +10,30 @@ Welcome to the Redux Based Authetication This repository contains both frontend 
 ## Getting Started
 
 1. Clone this repository to your local machine:
-
-```bash
 git clone <https://github.com/SiddikMulla/React-noita.git>
 
-Frontend
+## Frontend
 Navigate to the ticketing-system-react/ directory:
 cd ticketing-system-react
 
-Install dependencies:
+## Install dependencies:
 npm install
 
-start the Script Using
+## start the Script Using
 npm run start
 
-Backend
+## Backend
 Navigate to the react-ticketing-server/ directory:
 cd react-ticketing-server
 
-Install dependencies:
+## Install dependencies:
 npm install
 
-Start the backend server:
+## Start the backend server:
 nodemon server.js
 
-# This will start the backend server using Nodemon for automatic restarts upon file changes.
+## This will start the backend server using Nodemon for automatic restarts upon file changes.
 
 
-Feel free to customize it further based on your project's specific needs!
+## Feel free to customize it further based on your project's specific needs!
 
