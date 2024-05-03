@@ -10,7 +10,7 @@
 ### Getting Started
 - `git fork` The Repository or <br>
 - Clone this repository to your local machine <br>
-`git clone <https://github.com/SiddikMulla/React-noita.git>`
+`https://github.com/SiddikMulla/userAuth-React.git`
 
 ### Frontend
 - Navigate to the ticketing-system-react/ directory <br>
