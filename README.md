@@ -1,6 +1,6 @@
 # Redux Based Authetication
 
-Welcome to the Redux Based Authetication This repository contains both frontend and backend code for our project.
+## Welcome to the Redux Based Authetication This repository contains both frontend and backend code for our project.
 
 ### Folder Structure
 
